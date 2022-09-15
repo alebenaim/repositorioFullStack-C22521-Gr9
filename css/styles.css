@@ -1,0 +1,171 @@
+* {
+     box-sizing: border-box;
+ }
+ 
+ html{
+     font-size: 1 rem;
+     height: 100%;
+ }
+ 
+body {
+    background-color: #F2F2F2;
+    max-width: 1250px;
+    margin: 0.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+      
+}
+/* header -->logo texto y menu*/
+.contenedor{
+    display: flex;
+    height: auto;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background-color: white;
+    margin: 0.5rem;
+
+}
+
+.header-logo{
+    display: block;
+    padding-top:10px;
+}
+.header-titulo{
+    text-align: center;
+    display: block; 
+    padding-right: 10px;  
+    color: black;
+}
+
+.menu-option li{
+    padding-bottom:15px;
+    list-style:none;
+    display: inline-block; 
+}
+
+.menu-option a{
+    text-transform:none;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px;   
+}
+
+.menu-option :hover{
+    color: brown;
+}
+.menu-option :active{
+     background-color: brown; 
+     color:rgb(215, 189, 189);
+}
+/*Footer*/
+
+.foot{
+    display: flex;
+    height:auto;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background-color: white;
+    margin:0.5rem;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.leyenda{
+    text-align: center;
+    font-weight: 700;
+}
+
+.foot-redes{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-right:50px;
+
+}
+
+/*main - inicio*/
+
+/*banner*/
+.fondo{
+    background-image: url("../img/d-banner-64.jpg");
+    height: 200px;
+    max-width:100%;
+    margin: 0.5rem;
+}
+div.texto{
+    margin: 30px;
+    color: White;
+    opacity: 1;
+    text-align: center;
+}
+div.texto h3{
+    padding-top:60px;
+}
+
+/* resto del main*/
+.secciones {
+    max-width:100%;
+    margin: 0.5rem;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+}
+
+/*catalogo*/
+
+.secciones {
+    background-color: white;
+    margin: 0.5rem;
+    box-shadow: 0px 1px 10px rgba(44, 42, 42, 0.5);
+}
+.productos{
+    display: grid;
+    grid-template-columns: 190px 190px 190px 190px;
+    grid-template-rows: 200px ;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.imagen{
+    max-width: 90%;
+    padding: 10px;
+}
+.catalogo{
+    max-width: 190px;
+    padding: 10px;
+    text-align: center;
+} 
+.secciones h2{
+    margin:1rem; 
+}
+
+/*servicios*/
+.servicios{
+    padding-bottom:15px;
+    list-style:none;
+}
+
+.imagenes-servicios{
+    border: black 3px solid;
+    width:90%;
+    margin-left: 4rem;   
+}
+.fondo1{
+    background-image: url("../img/d-banner-64.jpg");
+    height: 100px;
+    max-width:100%;
+    margin: 0.5rem;
+}
