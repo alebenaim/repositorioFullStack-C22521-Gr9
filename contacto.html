@@ -20,38 +20,63 @@
             <div class="fondo">
                 <div class="texto">
                     <h2 class="animate__animated animate__rubberBand">La Cajita Musical</h2>
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> Vicky
                     <h4 class="animate__animated animate__slideInLeft">Contacto</h4>
                 </div>
             </div>
         </section>
         <br><br>
 
-        <h3 >Formulario de contacto</h3>
+
         <div class="formulario">
-            <form action="show-data.html">
-                <div class="formu">
-                <label for="nombre_contacto">Nombre</label>
-                <input type="text" name="nombre_contacto" id="nombre_contacto" placeholder="José" required>
-                </div>  <br>
-                <div class="formu">
-                <label for="apellido_contacto">Apellido</label>
-                <input type="text" name="apellido_contacto" id="apellido_contacto" placeholder="Martinez" required>
-                <div> <br>
-                <div class="formu">
-                <label for="pais"> Nacion. </label>
-                <input type="text" name="pais" id="pais" value="Argentina" required>
-                </div> <br>
-                <div class="formu">
-                <label for="mail" >Correo </label>
-                <input type="email" name="mail" id="mail" required>
-                </div><br>
-                <div> <label for="mensaje">mensaje</label>
-                <textarea name="mensaje" id="mensaje" cols="104" rows="5"></textarea>
-                </div><br>
-            <input type="submit" value="Enviar">
+            <form action="show-data.html" id="formulario" onsubmit="return validar();">
+                <h3 class="form_titulo">Formulario de contacto</h3>
+                <input type="text" class="form_input" name="nombre_contacto" id="nombre_contacto" >
+                <label for="nombre_contacto" class="form_label">Nombre</label>
+
+                <input type="text" class="form_input" name="apellido_contacto" id="apellido_contacto" >
+                <label for="apellido_contacto" class="form_label">Apellido</label>
+
+                <select name=provincias class="form_input" required >
+                    <option disabled selected value="">Selecciona tu Provincia</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Buenos Aires Capital">Buenos Aires Capital</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Rios">Entre Rios</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Santiago del Estero">Santiago del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                    </select>
+                
+                <input type="email" class="form_input" name="mail" id="email">
+                <label for="email" class="form_label">Correo </label>
+
+                <textarea name="mensaje" class="form_input" id="mensaje" cols="20" rows="5" placeholder="Escribi tu mensaje"></textarea>
+                <label for="mensaje" class="form_label" place></label>
+
+                <input type="submit" class="form_sub" value="Enviar">
             </form>
-            <br>
         </div>
         <br>
         <section id="botBanner">
@@ -63,5 +88,7 @@
     </footer>
     <!-- relaciono HTML con JS con header y footer-->
     <script src="./js/index.js"></script>
+    <script src="./form.js"></script>
 </body>
+
 </html>
