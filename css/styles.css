@@ -92,7 +92,7 @@ footer{
     background-color: white; 
 }
 
-.datos{
+.idatos{
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -319,12 +319,12 @@ margin:3px;
     justify-content: center; 
     align-items:center;
 }
-.fondo1{
+/*.fondo1{
     background-image: url("../img/d-banner-64.jpg");
     height: 100px;
     max-width:100%;
     margin: 0.5rem;
-}
+}*/
 
 /*formulario*/
 .formulario{
@@ -387,4 +387,98 @@ option[value=""][disabled0]{
 }
 option {
     color: black;
+}
+/*Reseñas*/
+.cont-resena{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat (5, auto);
+    justify-content: space-evenly;
+   
+
+ }
+
+.cont-resena-titulo{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    grid-area: titulo;
+    width:100%;
+}
+
+.item-resena1{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    text-align: center;
+    grid-area: item1;
+}
+.item-resena2{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    text-align: center;
+    grid-area: item2;
+}
+.item-resena3{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    text-align: center;
+    grid-area: item3;
+}
+.item-resena4{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    text-align: center;
+    grid-area: item4;
+}
+
+.iframe-resena{
+    width: 500px; 
+    height: 315px;
+    
+}
+@media screen and (min-width: 500px){
+    .cont-resena{
+        grid-template-areas: "titulo"
+        "item1"
+        "item2"
+        "item3"
+        "item4";
+    }
+}
+
+@media screen and (min-width: 600px){
+    .cont-resena{
+        grid-template-areas: "titulo"
+        "item1"
+        "item2"
+        "item3"
+        "item4";
+    }
+}
+
+@media screen and (min-width: 1250px){
+    .cont-resena{
+        grid-template-areas: "titulo titulo"
+        "item1 item2"
+        "item3 item4";
+        
+    }
 }
