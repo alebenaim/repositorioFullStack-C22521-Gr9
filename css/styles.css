@@ -147,7 +147,7 @@ div.texto h2{
 }
 
 
-/* resto del main*/
+/* resto del main pagina index*/
 
 .secciones {
     max-width:100%;
@@ -155,9 +155,6 @@ div.texto h2{
    /* margin: 0.5rem;*/
     box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.5);
 }
-
-/*catalogo*/
-
 
 .productos{
     background: rgb(242, 237, 237);
@@ -194,6 +191,7 @@ div.texto h2{
     text-align: justify;
 }
 
+/* pagina Productos */
 .encabezado {
 margin: 10px;
 padding: 15px;
@@ -204,9 +202,9 @@ border-radius: 6px;
 
 .container{
     display: grid;
-    grid-template-columns: 33% 47% 20%;
+    grid-template-columns: 30% 50% 20%;
     grid-template-areas:        
-        "card data price";
+        "card adata price";
     margin: 3px;
     background-color: #fafafa;
 
@@ -215,13 +213,16 @@ border-radius: 6px;
 grid-area: card;
 background-color: white; 
 margin:3px;
+padding: 5px;
 }
 
 .datos{
-    grid-area: data;
+    grid-area: adata;
     font-size: smaller;
     margin:3px;
     text-align:justify;
+    background-color: aliceblue; 
+    padding: 5px;
 }
 .price{
     grid-area: price;
@@ -229,6 +230,7 @@ margin:3px;
     align-items: center;
     margin:5px;
     background-color: rgb(172, 206, 246);
+    padding: 5px;
 }
 .compra{
     padding: 10px;
@@ -255,15 +257,14 @@ margin:3px;
     .container{
         display: grid;
         grid-template-columns: 70% 30%;
-        grid-template-rows: 40% 60%;
+       /* grid-template-rows: 40% 60%;*/
         grid-template-areas:        
             "card price "
-            "data data";
+            "adata adata";
         margin: 3px;
         background-color: #fafafa;
     }
  }
-
 
  @media (max-width: 660px) {
     .productos{
@@ -277,10 +278,10 @@ margin:3px;
     .container{
         display: grid;
         grid-template-columns: 70% 30%;
-        grid-template-rows: 50% 50%;
+       /* grid-template-rows: 50% 50%;*/
         grid-template-areas:        
             "card price "
-            "data data";
+            "adata adata";
         margin: 3px;
         background-color: #fafafa;
     }
@@ -289,21 +290,20 @@ margin:3px;
     .container{
         display: grid;
         grid-template-columns: 70% 30%;
-        grid-template-rows: 50% 50%;
+       /* grid-template-rows: 50% 50%;*/
         grid-template-areas:        
             "card card "
-            "data price";
+            "adata price";
         margin: 3px;
         background-color: #fafafa;
     }
  }
 
 .secciones h2{
-    display: flex;
-    margin:1rem; 
+    margin:1.5rem; 
+
 }
 
-/*servicios*/
 .servicios{
     padding-bottom:15px;
     list-style:none;
@@ -319,12 +319,7 @@ margin:3px;
     justify-content: center; 
     align-items:center;
 }
-/*.fondo1{
-    background-image: url("../img/d-banner-64.jpg");
-    height: 100px;
-    max-width:100%;
-    margin: 0.5rem;
-}*/
+
 
 /*formulario*/
 .formulario{
@@ -421,4 +416,71 @@ option {
     width: 500px; 
     height: 315px;
     
+}
+
+
+/*Pagina Servicios*/
+.det-servicios{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.titulo-servicios{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+   
+}
+.cuerpo-servicios {
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    display: grid;
+    grid-gap:10px;
+    grid-template-areas: "repara repara repara"
+                         "compra venta venta";
+
+}
+.reparaciones{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: repara;
+    display:grid;
+    grid-gap:10px;
+    grid-template-areas: "tit-repara tit-repara tit-repara"
+                         "repara1 repara2 repara3";
+}
+.reparaciones1{
+    grid-area: repara1;
+}
+
+.reparaciones2{
+    grid-area: repara2;
+}
+
+.reparaciones3{
+    grid-area: repara3;
+}
+
+
+.compra-usados{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: compra;
+}
+.venta-usados{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: venta;
 }
