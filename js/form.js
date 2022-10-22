@@ -16,24 +16,32 @@ const expresiones = {
 }
 
 function validacion() {
-var nombre, apellido, provincia, email, mensaje, tel;
+var nombre, apellido, provincia, email, mensaje, tel, parrafo;
 nombre= document.getElementById("nombre_contacto").value;
 apellido= document.getElementById("apellido_contacto").value;
 provincia= document.getElementById("provincias");
 email= document.getElementById("email").value;
 mensaje= document.getElementById("mensaje").value;
 tel= document.getElementById("telefono").value;
+parrafo= document.getElementById("warnings");
+
 
 if (nombre === "" || apellido === "" || provincia === "" || email === "" || mensaje === ""){
-    alert ("Todos los campos son obligatorios");
+    parrafo.innerHTML +=`<i class="fa-sharp fa-solid fa-triangle-exclamation"></i><b><i>Todos los campos son requeridos<b> <br>`
     return false;
 } 
 else if (!expresiones.nombre.test(nombre)){
-    alert("El nombre solo debe contener letras");
+    swal({
+        text:'Este campo solo debe contener letras',
+        icon:'error',
+    });
     return false;
 }
 else if (!expresiones.apellido.test(apellido)){
-    alert("El apellido solo debe contener letras");
+    swal({
+        text:'Este campo solo debe contener letras',
+        icon:'error',
+    });
     return false;
 }
 else if (apellido.length>20){
@@ -45,12 +53,26 @@ else if (email.length>40){
     return false;
 }
 else if (!expresiones.correo.test(email)){
-    alert("Correo invalido. ejemplo@dominio.com");
+    swal({
+        text:'Correo invalido. ejemplo@dominio.com',
+        icon:'error',
+    });
+   
     return false;
 }
 else if (!expresiones.tel.test(tel)){
-    alert("Numero de telefono invalido");
+    swal({
+        text:'Teléfono invalido. Por favor ingrese un número valido',
+        icon:'error',
+    });
     return false;
+}
+else{
+    swal({
+        text:'Mensaje enviado con éxito',
+        icon:'success',
+        time:1500,
+    });
 }
 }
 }

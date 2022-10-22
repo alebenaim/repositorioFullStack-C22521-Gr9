@@ -17,7 +17,7 @@ document.getElementById("idheader").innerHTML=cad;
 
 
 // footer de las páginas
-var cad=`<nav class="datos" >    
+var cad=`<nav class="idatos" >    
             <div class="imDatos">          
             <i class="fa-solid fa-phone"></i>  (11) 5432-3425</div>
             <div class="imDatos">  
