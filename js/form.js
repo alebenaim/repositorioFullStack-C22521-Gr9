@@ -30,14 +30,14 @@ if (nombre === "" || apellido === "" || provincia === "" || email === "" || mens
 } 
 else if (!expresiones.nombre.test(nombre)){
     swal({
-        text:'Este campo solo debe contener letras',
+        text:'El campo Nombre solo debe contener letras',
         icon:'error',
     });
     return false;
 }
 else if (!expresiones.apellido.test(apellido)){
     swal({
-        text:'Este campo solo debe contener letras',
+        text:'El campo Apellido solo debe contener letras',
         icon:'error',
     });
     return false;
